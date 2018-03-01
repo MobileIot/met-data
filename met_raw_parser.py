@@ -23,7 +23,7 @@ def handle_row(content_list):
     else:
         return None
 
-with open('met_objects_raw_top_100.csv', 'rb') as csvfile:
+with open('met_objects_raw_american.csv', 'rb') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
     # Skip first line
     first_row = next(reader)
@@ -36,7 +36,7 @@ with open('met_objects_raw_top_100.csv', 'rb') as csvfile:
         else:
             print "skip"
 
-    with open("met_objects_top_100.json", "w") as fd:
+    with open("met_objects_raw_american.json", "w") as fd:
         json.dump(collection, fd);
     print collection[0]
     print len(collection)
